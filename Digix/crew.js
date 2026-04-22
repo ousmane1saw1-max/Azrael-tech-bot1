@@ -14,7 +14,7 @@ async function getUserNumber() {
             output: process.stdout,
         });
 
-        rl.question('📲 Enter your WhatsApp number (with country code, e.g., 243xxxx): ', (number) => {
+        rl.question('📲 Enter your WhatsApp number (with country code, e.g., 226xxxx): ', (number) => {
             rl.close();
             resolve(number.trim());
         });
@@ -72,12 +72,12 @@ async function connectToWhatsapp(handleMessage) {
 
                 const messageText = `
 ╔══════════════════╗
-      *DigiX Bot Connected Successfully* 🚀
+      *AZRAEL Bot connecter avec succès 🇧🇫* 🚀
 ╠══════════════════╣
-> "Always Forward. Digital Crew, one of the best."
+> "Always Forward. AZRAEL Bot🇧🇫, l'un des meilleurs."
 ╚══════════════════╝
 
-*Digital Crew 243*
+*AZRAEL Bot 🇧🇫*
                 `;
 
                 await sock.sendMessage(chatId, {
@@ -111,7 +111,7 @@ async function connectToWhatsapp(handleMessage) {
                 }
 
                 console.log(`🔄 Requesting pairing code for ${number}`);
-                const code = await sock.requestPairingCode(number, 'AZRAELYC');
+                const code = await sock.requestPairingCode(number, 'AZRAELYT');
                 console.log('📲 Pairing Code:', code);
                 console.log('👉 Enter this code on your WhatsApp app to pair.');
 
