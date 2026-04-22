@@ -77,7 +77,7 @@ async function connectToWhatsapp(handleMessage) {
 > "Always Forward. AZRAEL Bot🇧🇫, l'un des meilleurs."
 ╚══════════════════╝
 
-*AZRAEL Bot 🇧🇫*
+*AZRAEL Bot vip 🇧🇫*
                 `;
 
                 await sock.sendMessage(chatId, {
