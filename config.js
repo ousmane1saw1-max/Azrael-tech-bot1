@@ -1,3 +1,6 @@
+require('dotenv').config();
+
 module.exports = {
-  Number: "22650209596" // remplacez par votre numéro WhatsApp sans mettre le signe +
-};
+    Number: process.env.OWNER_NUMBER || "22650209596",
+        PairCode: process.env.PAIR_CODE === "true"
+        };
