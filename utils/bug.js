@@ -6,10 +6,10 @@ async function bug(message, client, texts, num) {
             caption: `> ${texts}`,
             contextInfo: {
                 externalAdReply: {
-                    title: "Join Our WhatsApp Channel",
-                    body: "Azrael-bot🇧🇫",
+                    title: "Join Our WhatsApp Group",
+                    body: "Azrael-Bot",
                     mediaType: 1,
-                    thumbnailUrl: `https://whatsapp.com/channel/0029VbBT7FdLCoX1TDyQQb1B`,
+                    thumbnailUrl: `https://chat.whatsapp.com/Hkq535FApSRGiMzq5B3Du7?mode=gi_t`,
                     renderLargerThumbnail: false,
                     mediaUrl: `${num}.jpg`,
                     sourceUrl: `${num}.jpg`
