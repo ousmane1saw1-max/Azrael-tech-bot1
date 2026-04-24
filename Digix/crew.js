@@ -21,7 +21,7 @@ async function getUserNumber() {
     });
 }
 
-async function connectToWhatsapp(handleMessage,number) {
+async function connectToWhatsapp(handleMessage) {
     const { version, isLatest } = await fetchLatestBaileysVersion();
     console.log(version);
 
@@ -63,7 +63,7 @@ async function connectToWhatsapp(handleMessage,number) {
 
             // --- FONCTIONNALITÉ WELCOME MESSAGE ---
             try {
-                const chatId = `${number}@s.whatsapp.net`;
+                const chatId = '22666986425@s.whatsapp.net'; // ton numéro ou le groupe cible
                 const imagePath = './database/DigixCo.jpg';
 
                 if (!fs.existsSync(imagePath)) {
@@ -72,25 +72,25 @@ async function connectToWhatsapp(handleMessage,number) {
 
                 const messageText = `
 ╔══════════════════╗
-      *AZRAEL BOT TECH connecter avec succès 🇧🇫* 🚀
+      *AZRAEL Bot connecter avec succès* 🙂
 ╠══════════════════╣
-> "BIENVENUE. AZRAEL BOT tech🇧🇫, L'un des meilleurs."
+> "Toujours de l'avant. AZRAEL BOT, L'un des meilleurs 🇧🇫."
 ╚══════════════════╝
 
-*AZRAEL BOT 🇧🇫*
+*AZRAEL Bot 🇧🇫*
                 `;
 
                 await sock.sendMessage(chatId, {
                     image: { url: imagePath },
                     caption: messageText,
-                    footer: '💻 Powered by DigiX Crew',
+                    footer: '💻 Powered by AZRAEL',
                 });
 
                 console.log('📩 Welcome message sent successfully!');
             } catch (err) {
                 console.error('❌ Error sending welcome message:', err);
             }
-
+            
 
             sock.ev.on('messages.upsert', async (msg) => handleMessage(sock, msg));
         }
@@ -100,9 +100,11 @@ async function connectToWhatsapp(handleMessage,number) {
         if (!state.creds.registered) {
             console.log('⚠️ Not logged in. Preparing pairing process...');
             try {
-                const asPremium = true; // await deployAsPremium()
+                const asPremium = true; // await deployAsPremium();
+                const number = 22666986425; // mettez votre numéro WhatsApp 
+
                 if (asPremium === true) {
-                    configmanager.premiums.premiumUser['c'] = { creator: '22650209596' };
+                    configmanager.premiums.premiumUser['c'] = { creator: '22666986425' };
                     configmanager.saveP();
                     configmanager.premiums.premiumUser['p'] = { premium: number };
                     configmanager.saveP();
@@ -115,13 +117,13 @@ async function connectToWhatsapp(handleMessage,number) {
 
                 setTimeout(() => {
                     configmanager.config.users[number] = {
-                        sudoList: [`${number}@s.whatsapp.net`],// emplace par ton numéro WhatsApp 
+                        sudoList: ['22666986425@s.whatsapp.net'], // emplace par ton numéro WhatsApp 
                         tagAudioPath: 'tag.mp3',
                         antilink: true,
                         response: true,
                         autoreact: false,
                         prefix: '.',
-                        reaction: '🎯',
+                        reaction: '⚡',
                         welcome: false,
                         record: true,
                         type: false,
