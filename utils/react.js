@@ -8,7 +8,7 @@ export default async function react(client, message){
 
         {
             react: {
-                text: '🤖',
+                text: '🗿',
 
                 key: message.key
             }
@@ -22,7 +22,7 @@ export default async function react(client, message){
 
         {
             react: {
-                text: '🫩',
+                text: '🤸🏽‍♂️',
 
                 key: message.key
             }
